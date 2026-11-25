@@ -1,6 +1,4 @@
-
 # BVI3114 - Technology System Optimization II
-
 ## PBL: IoT Sensor Data Forecasting System
 
 Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA)
