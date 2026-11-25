@@ -1,4 +1,4 @@
-# BVI3114 - Technology System Optimization II
+# BVI3114 (Technology System Optimization II)
 ## PBL: IoT Sensor Data Forecasting System
 
 Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA)
@@ -9,13 +9,13 @@ Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA)
 
 **Lecturer:** Sir Mohd Zamri Bin Ibrahim
 
-## 1. Introduction
+## 1.0 Introduction
 
 This project extends Lab 3 by implementing a forecasting algorithm in the existing ESP32 based temperature and humidity monitoring system. Historical sensor readings collected using the DHT11 sensor are processed in Google Apps Script to generate forecasts for the next 24 hours.
 
 Two forecasting techniques were studied: Simple Moving Average (SMA) and Exponential Moving Average (EMA).
 
-## 2. Simple Moving Average (SMA)
+## 2.0 Simple Moving Average (SMA)
 
 ### Basic Principle
 
@@ -43,7 +43,7 @@ Where x represents the sensor reading and n represents the number of readings.
 
 SMA is suitable for DHT11 temperature and humidity readings when environmental conditions remain relatively stable. However, it may respond slowly when temperature or humidity changes suddenly.
 
-## 3. Exponential Moving Average (EMA)
+## 3.0 Exponential Moving Average (EMA)
 
 ### Basic Principle
 
@@ -76,13 +76,13 @@ Where:
 
 EMA is suitable for DHT11 temperature and humidity monitoring because environmental conditions can change over time. It allows recent readings to influence the forecast while maintaining a relatively stable prediction.
 
-## 4. Comparison of Forecasting Techniques
+## 4.0 Comparison of Forecasting Techniques
 
 Both SMA and EMA are simple forecasting techniques that help reduce fluctuations in sensor readings.
 
 SMA gives equal weight to all readings within a selected window, while EMA gives greater weight to recent readings. Both techniques are easy to implement, but EMA is selected for this project because of its ability to adapt to changing environmental conditions.
 
-## 5. Selected Forecasting Technique and Justification
+## 5.0 Selected Forecasting Technique and Justification
 
 Exponential Moving Average (EMA) was selected as the forecasting algorithm for this project.
 
@@ -98,7 +98,7 @@ EMAₜ = 0.3 × xₜ + 0.7 × EMAₜ₋₁
 
 The forecasting accuracy will be evaluated by comparing predicted values with actual sensor readings.
 
-## 6. Forecasting Configuration
+## 6.0 Forecasting Configuration
 
 - Forecasting algorithm: EMA
 - Smoothing factor: 0.3
@@ -112,13 +112,13 @@ The forecasting accuracy will be evaluated by comparing predicted values with ac
 
 The EMA algorithm calculates separate forecast values for temperature and humidity. The forecast values remain constant across the 24 hour forecast period until updated using new sensor readings.
 
-## 7. Repository Contents
+## 7.0 Repository Contents
 
 - TSO2_PBL.ino - ESP32 sensor data collection, validation and transmission code.
 - GoogleAppsScript.gs - Sensor data processing and EMA forecasting code.
 - README.md - Forecasting algorithm research and selection documentation.
 
-## 8. References
+## 8.0 References
 
 1. NIST Engineering Statistics Handbook - Single Moving Average.
    https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc421.htm
